@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: docker.io/saiyam911/devops-project:{{ image_deploy_tag }}
+        image: docker.io/jasonng88/devops-project:{{ image_deploy_tag }}
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
@@ -86,9 +86,9 @@ spec:
   - name: http
     port: 80
     protocol: HTTP
-    hostname: "app.kubesimplify.com"
+    hostname: "app.jasonkube.pilot"
   - name: https
-    hostname: "app.kubesimplify.com"
+    hostname: "app.jasonkube.pilot"
     port: 443
     protocol: HTTPS
     allowedRoutes:
@@ -103,9 +103,9 @@ spec:
   - name: argo-http
     port: 80
     protocol: HTTP
-    hostname: "argo.kubesimplify.com"
+    hostname: "argo.jasonkube.pilot"
   - name: argo-https
-    hostname: "argo.kubesimplify.com"
+    hostname: "argo.jasonkube.pilot"
     port: 443
     protocol: HTTPS
     allowedRoutes:
@@ -128,7 +128,7 @@ spec:
   - name: app-gateway
     namespace: default
   hostnames:
-  - "app.kubesimplify.com"
+  - "app.jasonkube.pilot"
   rules:
   - matches:
     - path:
