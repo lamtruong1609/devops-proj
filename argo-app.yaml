@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: react
+  name: my-go-app
   namespace: argocd
 spec:
   project: default
