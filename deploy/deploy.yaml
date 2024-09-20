@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: docker.io/jasonng88/devops-project:sha-204b0de
+        image: docker.io/jasonng88/devops-project:sha-5cb68fb
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
@@ -126,7 +126,7 @@ metadata:
 spec:
   parentRefs:
   - name: cluster-gateway
-    namespace: default
+  - namespace: default
   hostnames:
   - "app.jasonkube.pilot"
   rules:
