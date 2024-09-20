@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: docker.io/jasonng88/devops-project:sha-25b64b7
+        image: docker.io/jasonng88/devops-project:sha-204b0de
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
@@ -87,36 +87,36 @@ spec:
     port: 80
     protocol: HTTP
     hostname: "app.jasonkube.pilot"
-  - name: https
-    hostname: "app.jasonkube.pilot"
-    port: 443
-    protocol: HTTPS
-    allowedRoutes:
-      namespaces:
-        from: All
-    tls:
-      mode: Terminate
-      certificateRefs:
-      - name: app-jasonkube-pilot-tls
-        kind: Secret
-        group: ""
+#  - name: https
+#    hostname: "app.jasonkube.pilot"
+#    port: 443
+#    protocol: HTTPS
+#    allowedRoutes:
+#      namespaces:
+#        from: All
+#    tls:
+#      mode: Terminate
+#      certificateRefs:
+#      - name: app-jasonkube-pilot-tls
+#        kind: Secret
+#        group: ""
   - name: argo-http
     port: 80
     protocol: HTTP
     hostname: "argo.jasonkube.pilot"
-  - name: argo-https
-    hostname: "argo.jasonkube.pilot"
-    port: 443
-    protocol: HTTPS
-    allowedRoutes:
-      namespaces:
-        from: All
-    tls:
-      mode: Terminate
-      certificateRefs:
-      - name: argo-jasonkube-pilot-tls
-        kind: Secret
-        group: ""
+#  - name: argo-https
+#    hostname: "argo.jasonkube.pilot"
+#    port: 443
+#    protocol: HTTPS
+#    allowedRoutes:
+#      namespaces:
+#        from: All
+#    tls:
+#      mode: Terminate
+#      certificateRefs:
+#      - name: argo-jasonkube-pilot-tls
+#        kind: Secret
+#        group: ""
 
 ---
 apiVersion: gateway.networking.k8s.io/v1beta1
