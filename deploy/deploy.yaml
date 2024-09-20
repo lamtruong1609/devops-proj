@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: docker.io/jasonng88/devops-project:sha-8ad5902
+        image: docker.io/jasonng88/devops-project:sha-5d0cc05
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
@@ -30,7 +30,7 @@ spec:
               name: postgresql-credentials
               key: password
         - name: DB_HOST
-          value: my-postgresql-1.app.svc.cluster.local
+          value: my-postgresql-rw.app.svc.cluster.local
         - name: DB_PORT
           value: "5432"
         - name: DB_NAME
