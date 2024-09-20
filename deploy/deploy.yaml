@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: docker.io/jasonng88/devops-project:sha-40bed61
+        image: docker.io/jasonng88/devops-project:sha-1928047
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
@@ -137,4 +137,6 @@ spec:
         value: /
     backendRefs:
     - name: my-app-service
+      namespace: app
       port: 80
+      kind: Service
