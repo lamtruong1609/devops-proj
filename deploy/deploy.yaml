@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: docker.io/jasonng88/devops-project:sha-5d0cc05
+        image: docker.io/jasonng88/devops-project:sha-c6d0666
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
@@ -98,23 +98,6 @@ spec:
       mode: Terminate
       certificateRefs:
       - name: app-jasonkube-pilot-tls
-        kind: Secret
-        group: ""
-  - name: argo-http
-    port: 80
-    protocol: HTTP
-    hostname: "argo.jasonkube.pilot"
-  - name: argo-https
-    hostname: "argo.jasonkube.pilot"
-    port: 443
-    protocol: HTTPS
-    allowedRoutes:
-      namespaces:
-        from: All
-    tls:
-      mode: Terminate
-      certificateRefs:
-      - name: argo-jasonkube-pilot-tls
         kind: Secret
         group: ""
 
