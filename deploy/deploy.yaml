@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: docker.io/jasonng88/devops-project:sha-2c20485
+        image: docker.io/jasonng88/devops-project:sha-dd043ef
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
